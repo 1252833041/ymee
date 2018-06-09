@@ -2,7 +2,7 @@
 /*create by 2015-07-07*/
 body{ background:#f7f7f7; font:14px/1.15 "Microsoft Yahei",Arial,Helvetica,sans-serif; position:relative; overflow-x:hidden;}
 .head{width:960px; height:80px; margin:0 auto; overflow:hidden;}
-.head .logo{float:left; width:170px; overflow:hidden;}
+.head .logo{float:left; width:117px; overflow:hidden;margin-left: 70px;}
 .head .logo a{float:left; width:142px; height:55px; margin:23px 10px 0 1px; overflow:hidden;}
 /*.head .logo var{ float:left; width:1px; height:23px; background:url(img/base-bg.png) no-repeat 0 0;margin-top:32px;}*/
 .head .logo p{float:left; width:115px; height:46px; padding-left:12px; margin-top:28px; }
@@ -36,20 +36,22 @@ body{ background:#f7f7f7; font:14px/1.15 "Microsoft Yahei",Arial,Helvetica,sans-
 .head .tab-web a.hk:hover{background:url("base-sprite.png")/*tpa=http://www.lejuhuyu.com/theme/default/css/img/base-sprite.png*/ no-repeat -119px 0;}
 .head .tab-web a.en:hover{background:url("base-sprite.png")/*tpa=http://www.lejuhuyu.com/theme/default/css/img/base-sprite.png*/ no-repeat -149px 0; margin-right:0;}
 
-.x-slide{width:100%;  margin:0 auto; position:relative;}
+.x-slide{width: 1680px; position: relative;left: 50%;margin-left: -840px;overflow: hidden;height: 450px;}
 .x-slide ul{display:block; width:100%; overflow:hidden;}
-.x-slide li{display:block; width:100%;  position:absolute; top:0; left:0;}
+.x-slide li{display:block; width:100%;  position:absolute; top:0; left:0; overflow:hidden;}
 .x-slide li img{display:block; width:100%;  border:0;}
 .x-slide .btn{ width:100%; position:absolute; bottom:7px; left:0; text-align:center;}
 .x-slide .btn span{ display:inline-block; *display:inline; *zoom:1;  vertical-align:middle; width:10px; height:10px; margin:0 5px; border-radius:50px; -webkit-border-radius:50px;  background:rgba(255,255,255,0.5);  overflow:hidden;  margin-right:5px; cursor:pointer; }
 .x-slide .btn span.current{background:#fff; width:14px; height:14px;}
 
-.content{ width:100%; margin:0 auto; background:#f7f7f7;}
-.game-img{ width:1000px; margin:0 auto; padding-top:22px;}
-.game-img .av-img{float:left; width:438px; height:303px; margin:0 20px 20px 0; border-radius:8px; -webkit-border-radius:8px; overflow:hidden; position:relative;}
-.game-img .av-img1{ width:438px; height:303px;}
-.game-img .av-img3{ margin-right:0;}
-.game-img .av-img6{ width:472px; margin-right:0;}
+.content{ width:100%; margin:0 auto; background:#f7f7f7;padding-bottom: 50px;}
+.game-img{ width:980px; margin:0 auto; padding-top:22px;overflow: hidden;}
+.game-img .title{color: #21acd6;font-size: 29px;padding-left:20px;height: 76px; line-height: 76px;border-bottom: 1px solid #ddd;width: 100%;font-weight: bold;overflow: hidden;position: relative;}
+.game-img .title .bar{width: 2px;height: 30px;position: absolute;top: 23px;left: 0;background-color: #21acd6}
+.game-img .con{text-align: center;}
+.game-img .av-img img{width: 100%;height: 100%;}
+.game-img .av-img{float:left; width:298px; height:498px; margin:0 40px 20px 0;  overflow:hidden; position:relative;}
+.game-img .av-img-r{ margin-right:0;}
 .game-img .av-img .cover{display:none; width:100%; height:100%; line-height:210px; text-align:center; font-size:18px; color:#fff; font-weight:bold; background:rgba(255,255,255,0.3); position:absolute; top:0; left:0; z-index:9; border-radius:8px; -webkit-border-radius:8px;}
 .game-img .av-img:hover .cover{display:block;}
 
@@ -57,11 +59,9 @@ body{ background:#f7f7f7; font:14px/1.15 "Microsoft Yahei",Arial,Helvetica,sans-
 .game-img .more a{display:block; width:133px; height:44px; margin:0 auto; background:url("ann_3.png")/*tpa=http://www.lejuhuyu.com/images/ann_3.png*/ no-repeat;text-indent:-999em; overflow:hidden; cursor:pointer;}
 .game-img .more a:hover{background:url("ann_3_1.png")/*tpa=http://www.lejuhuyu.com/images/ann_3_1.png*/ no-repeat;}
 
-/*推荐手游*/
-.content .title{width:960px; height:34px; margin:0 auto; overflow:hidden;}
-.title .index{float:left; width:126px; overflow:hidden;}
-
-
+.download{width: 157px; position: absolute;left: 50%;top:850px;margin-left: 550px;overflow: hidden;height: 230px;}
+.download .qr{width: 155px;height:155px;display: block;border:1px solid #ddd;}
+.download p{width: 100%;line-height:75px;text-align: center;color: #000;font-size: 25px;}
 .fy-txt{width:964px; margin:0 auto; height:428px; border-radius:8px; -webkit-border-radius:8px; background:#fff;}
 .fy-zixun{float:left; width:673px; padding:18px 0 0 21px; position:relative;}
 .fy-media{float:right; width:205px; padding:18px 21px 0 0; position:relative;}
@@ -163,7 +163,7 @@ body{ background:#f7f7f7; font:14px/1.15 "Microsoft Yahei",Arial,Helvetica,sans-
 .game-img-p .av-img-p .cover{display:none; width:100%; height:100%; line-height:210px; text-align:center; font-size:18px; color:#fff; font-weight:bold; background:rgba(255,255,255,0.3); position:absolute; top:0; left:0; z-index:9; border-radius:8px; -webkit-border-radius:8px;}
 .game-img-p .av-img-p:hover .cover{display:block;}
 
-.j-page-banner{ width:100%; height:84px; overflow:hidden; background:#ed7017;}
+.j-page-banner{ width:100%; height:84px; overflow:hidden; background:#28c5f5;}
 .j-page-banner .j-img{ width:964px; height:84px; margin:0 auto;}
 
 .j-page-main{width:100%; margin:0 auto;text-align: center; border: 10px solid #000000;}
@@ -343,7 +343,27 @@ body{ background:#f7f7f7; font:14px/1.15 "Microsoft Yahei",Arial,Helvetica,sans-
 	
 }
 
-
+.main-wrap{min-height: 700px;width: 100%;}
+.main-title{width:100%; height:64px; overflow:hidden; background:#28c5f5;}
+.main-title p{
+	width: 900px;
+	margin: 0 auto;
+	line-height: 64px;
+	position: relative;
+	font-size: 28px;
+	color: #fff;
+	font-weight: bold;
+	padding-left: 20px;
+}
+.main-title p span{
+	width:2px;
+	display: block;
+	height: 30px;
+	position: absolute;
+	top: 17px;
+	left: 0;
+	background-color: #fff;
+}
 .j-feiyu{background:#ff8300; height:75px;}
 .f-a{width:964px; height:361px; background:url("base-feiyu.png")/*tpa=http://www.lejuhuyu.com/theme/default/css/img/base-feiyu.png*/ no-repeat 0 0; margin:14px auto 0; overflow:hidden;}
 .f-a .a-txt{float:left; width:609px;}
