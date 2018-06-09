@@ -163,9 +163,66 @@ body{ background:#f7f7f7; font:14px/1.15 "Microsoft Yahei",Arial,Helvetica,sans-
 .game-img-p .av-img-p .cover{display:none; width:100%; height:100%; line-height:210px; text-align:center; font-size:18px; color:#fff; font-weight:bold; background:rgba(255,255,255,0.3); position:absolute; top:0; left:0; z-index:9; border-radius:8px; -webkit-border-radius:8px;}
 .game-img-p .av-img-p:hover .cover{display:block;}
 
-.j-page-banner{ width:100%; height:84px; overflow:hidden; background:#ed7017;}
-.j-page-banner .j-img{ width:964px; height:84px; margin:0 auto;}
-
+.j-page-banner{ width:100%; height:84px; overflow:hidden; background:#28c5f5;}
+.j-page-banner .j-img{ width:964px; height:84px;background-color: #28c5f5; margin:0 auto;}
+.j-page-banner .j-img .title{
+	width: 100%;
+    height: 84px;
+    line-height: 84px;
+    font-size: 29px;
+	color: #fff;
+	position: relative;
+}
+.title .aa{
+	width: 4px;
+    height: 40px;
+    background-color: #fff;
+    display: inline-block;
+    position: absolute;
+    top: 21px;
+}
+.title .bb{
+	margin-left: 15px;
+}
+.mid_box{
+	width:1080px;
+	height:auto;
+	overflow: hidden;
+	background-color: #fff;
+	margin: 0 auto;
+    margin-top: 30px;
+}
+.mid_box .content{
+	width: 900px;
+	background-color: #fff;
+	text-align: left;
+	margin-top: 10px;
+}
+.content .first_title{
+	color: #28c5f5;
+	font-size: 20px;
+	height:60px;
+	line-height: 60px;
+	border-bottom: #e0e0e0 solid 1px;
+}
+.the_content{
+	margin-left: 10px;
+    margin-right: 10px;
+    height: auto;
+    overflow: hidden;
+}
+.second_title{
+	color: #28c5f5;
+	font-size: 16px;
+	margin-top: 30px;
+}
+.view1{
+	width: 580px;
+	height:390px;
+	margin: 0 auto;
+	margin-top: 10px;
+	border: #e0e0e0 solid 1px;
+}
 .j-page-main{width:100%; margin:0 auto;text-align: center; border: 10px solid #000000;}
 .j-page-main .p-head{width:100%; height:84px; margin:20px auto 0; background:#fff; border-radius:8px; -webkit-border-radius:8px; position:relative;}
 .j-page-main .p-body{width:100%; margin:20px auto 0;text-align: center; border: 10px solid #000000;}

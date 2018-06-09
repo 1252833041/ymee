@@ -8,7 +8,16 @@
 		<link rel="stylesheet" type="text/css" href="./css/css.css"  />
 		<link href="./css/reset.css"  rel="stylesheet" type="text/css" />
 		<link href="./css/base.css"  rel="stylesheet" type="text/css" />
-	</head>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+		
 
 	<body>
 
@@ -57,21 +66,25 @@
 			</div>
 			<div class="j-page-banner">
 				<div class="j-img">
-					<img src="http://www.hzjjwl.com/up_aboutus.png"  alt="关于" title="关于" />
+					<div class="title">
+						<span class="aa"></span>
+						<span class="bb">产品体系</span>
+					</div>
+
 				</div>
 			</div>
 
 			<div class="leju-product-body">
+				<div class="mid_box">
+					<div class="content">
+						<p class="first_title">（一）行业背景分析</p>
+						<div class="the_content">
+							<p class="second_title">（1）市场分析</p>
+							<div class="view1"  id="container">
 
-				<div class="product-body-title">
-					<img src="http://www.hzjjwl.com/allgames.png"  alt="关于" title="关于" />
-				</div>
+							</div>
 
-				<div class="game-img-p">
-					<div class="con clearfix">
-						<a hidefocus="true" href="#"  class="av-img-p" style = "margin-left: 265px;"> <img src="http://www.hzjjwl.com/game_tcswlb.png"  alt="" title=""> <var class="cover"></var>
-						</a>
-						
+						</div>
 					</div>
 				</div>
 			</div>
@@ -116,28 +129,93 @@
 
 		</div>
 
-		<script type="text/javascript" src="jquery-3.1.1.min.js" ></script>
-		<script type="text/javascript" src="common.js"  ></script>
-		<script>
-			$(function() {
+		
+		<script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+app.title = '嵌套环形图';
 
-				$('.dr').click(function() {
-
-					$('.dl').show();
-
-				});
-
-				$('.gb').click(function() {
-
-					$('.dl').hide();
-
-				});
-
-			})
-		</script>
-		<span style="display: none;"> 
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261315412'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261315412' type='text/javascript'%3E%3C/script%3E"));</script>
-</span >
+option = {
+    tooltip: {
+        trigger: 'item',
+        formatter: "{a} <br/>{b}: {c} ({d}%)"
+    },
+    legend: {
+        bottom: 10,
+        left: 'center',
+        data:['不愿意消费','60元以内/月','61-100元/月','101-200元/月','201-300元/月','301-500元/月','501-1000元/月','1001-5000元/月','5000元以上']
+    },
+    series: [
+      
+        {
+            name:'访问来源',
+            type:'pie',
+            radius: ['25%', '45%'],
+            label: {
+                normal: {
+                    formatter: '  {b|{b}}  {per|{d}%}  ',
+                    backgroundColor: '#eee',
+                    borderColor: '#aaa',
+                    borderWidth: 1,
+                    borderRadius: 4,
+                    // shadowBlur:3,
+                    // shadowOffsetX: 2,
+                    // shadowOffsetY: 2,
+                    // shadowColor: '#999',
+                    // padding: [0, 7],
+                    rich: {
+                        a: {
+                            color: '#999',
+                            lineHeight: 22,
+                            align: 'center'
+                        },
+                        // abg: {
+                        //     backgroundColor: '#333',
+                        //     width: '100%',
+                        //     align: 'right',
+                        //     height: 22,
+                        //     borderRadius: [4, 4, 0, 0]
+                        // },
+                        hr: {
+                            borderColor: '#aaa',
+                            width: '100%',
+                            borderWidth: 0.5,
+                            height: 0
+                        },
+                        b: {
+                            fontSize: 16,
+                            lineHeight: 33
+                        },
+                        per: {
+                            color: '#eee',
+                            backgroundColor: '#334455',
+                            padding: [2, 4],
+                            borderRadius: 2
+                        }
+                    }
+                }
+            },
+            data:[
+                {value:193, name:'不愿意消费'},
+                {value:251, name:'61-100元/月'},
+                {value:167, name:'60元以内/月'},
+                {value:130, name:'101-200元/月'},
+                {value:72, name:'201-300元/月'},
+                {value:86, name:'301-500元/月'},
+                {value:61, name:'501-1000元/月'},
+                {value:27, name:'1001-5000元/月'},
+                {value:15, name:'5000元以上'}
+            ]
+        }
+    ]
+};;
+			if (option && typeof option === "object") {
+				myChart.setOption(option, true);
+			}
+			</script>
+		
 	</body>
-
+	
 </html>
