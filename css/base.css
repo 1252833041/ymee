@@ -164,34 +164,17 @@ body{ background:#f7f7f7; font:14px/1.15 "Microsoft Yahei",Arial,Helvetica,sans-
 .game-img-p .av-img-p:hover .cover{display:block;}
 
 .j-page-banner{ width:100%; height:84px; overflow:hidden; background:#28c5f5;}
-<<<<<<< HEAD
+
 .j-page-banner .j-img{ width:964px; height:84px;background-color: #28c5f5; margin:0 auto;}
-.j-page-banner .j-img .title{
-	width: 100%;
-    height: 84px;
-    line-height: 84px;
-    font-size: 29px;
-	color: #fff;
-	position: relative;
-}
-.title .aa{
-	width: 4px;
-    height: 40px;
-    background-color: #fff;
-    display: inline-block;
-    position: absolute;
-    top: 21px;
-}
-.title .bb{
-	margin-left: 15px;
-}
+
 .mid_box{
 	width:1080px;
 	height:auto;
 	overflow: hidden;
 	background-color: #fff;
 	margin: 0 auto;
-    margin-top: 30px;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 .mid_box .content{
 	width: 900px;
@@ -207,8 +190,8 @@ body{ background:#f7f7f7; font:14px/1.15 "Microsoft Yahei",Arial,Helvetica,sans-
 	border-bottom: #e0e0e0 solid 1px;
 }
 .the_content{
-	margin-left: 10px;
-    margin-right: 10px;
+	margin-left: 30px;
+    margin-right: 30px;
     height: auto;
     overflow: hidden;
 }
@@ -224,10 +207,45 @@ body{ background:#f7f7f7; font:14px/1.15 "Microsoft Yahei",Arial,Helvetica,sans-
 	margin-top: 10px;
 	border: #e0e0e0 solid 1px;
 }
-=======
+.view2{
+	width: 100%;
+	height:220px;
+	margin: 0 auto;
+	margin-top: 10px;
+	border: #e0e0e0 solid 1px;
+}
+.the_text{
+	line-height: 25px;
+    margin-top: 20px;
+}
+.bottom_box{
+	width:100%;
+	height:auto;
+	
+}
+.bottom_box .left_box{
+	width:44%;
+	float: left;
+	margin-left: 3%;
+	margin-right: 3%;
+	margin-top: 10px;
+}
+.bottom_box .right_box{
+	width:44%;
+	float: left;
+	margin-left: 3%;
+	margin-right: 3%;
+	margin-top: 10px;
+}
+.last_title{
+	color: #28c5f5;
+	text-align: center;
+	padding-top: 10px;
+	
+}
 .j-page-banner .j-img{ width:964px; height:84px; margin:0 auto;}
 
->>>>>>> b96a607356cee3924d2b6225255f9781c0707f35
+
 .j-page-main{width:100%; margin:0 auto;text-align: center; border: 10px solid #000000;}
 .j-page-main .p-head{width:100%; height:84px; margin:20px auto 0; background:#fff; border-radius:8px; -webkit-border-radius:8px; position:relative;}
 .j-page-main .p-body{width:100%; margin:20px auto 0;text-align: center; border: 10px solid #000000;}
