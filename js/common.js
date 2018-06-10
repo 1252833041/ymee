@@ -1,5 +1,5 @@
 arr = eval(localStorage.user); //获取localStoragevar
-if(arr[0].loginName) {
+if(arr&&arr[0].loginName) {
 	$(".welcome").text("北京乐聚互娱欢迎：");
 	//	$(".welcome").attr("href"," ");
 	$(".username1").text(arr[0].loginName);
@@ -141,53 +141,10 @@ function NoKong() {
 
 //登录部分
 
-function login() {
-	if(NoKong1()) {
-		if(localStorage.user) {
-			arr = eval(localStorage.user); //获取localStoragevar 
-			k = 0;
-			for(e in arr) {
-				if($('#loginName1').val() == arr[e].loginName) {
-					if($('#loginPsd1').val() == arr[e].loginPsd) {
-						alert('登录成功');
-						clear();
-						k = 0;
-						window.open("http://www.lejuhuyu.com/theme/default/js/index_pc.html");
-						return;
-					} else {
-						alert('密码错误');
-						clear();
-						k = 0;
-						return;
-					}
-				} else {
-					k = 1;
-				}
-			}
-			if(k == 1) {
-				alert('用户名不存在');
-				clear1();
-			}
-		} else {
-			alert('用户名不存在');
-			clear1();
-		}
-	}
-}
+
 
 function clear1() {
 	$('#loginName1').val('');
 	$("#loginPsd1").val('');
 }
 
-function NoKong1() {
-	if($('#loginName1').val() == "") {
-		alert('用户名不能为空');
-		return
-		false;
-	} else if($('#loginPsd1').val() == "") {
-		alert('密码不能为空');
-		return false;
-	}
-	return true;
-}
