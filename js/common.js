@@ -49,55 +49,35 @@ var CityArray = {
 	91: "国外"
 }
 //验证身份证及返回地区、出生年月、性别
-function CheckIdCard(sId) {
-	if(sId.length == 15) {
-		sId = sId.replace(/([\d]{6})(\d{9})/, "$119$2x");
-	}
-	var iSum = 0
-	var info = ""
-	if(!/^\d{17}(\d|x)$/i.test(sId)) return "非法的身份证号";
-	sId = sId.replace(/x$/i, "a");
-	if(CityArray[parseInt(sId.substr(0, 2))] == null) return "Error:非法地区,请正确填写";
-	sBirthday = sId.substr(6, 4) + "-" + Number(sId.substr(10, 2)) + "-" + Number(sId.substr(12, 2));
-	var d = new Date(sBirthday.replace(/-/g, "/"))
-	if(sBirthday != (d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate())) return "Error:非法生日,请正确填写";
-	for(var i = 17; i >= 0; i--) iSum += (Math.pow(2, i) % 11) * parseInt(sId.charAt(17 - i), 11)
-	if(iSum % 11 != 1) return "Error:非法证号,请正确填写";
-	return 1;
-//	return CityArray[parseInt(sId.substr(0, 2))] + "," + sBirthday + "," + (sId.substr(16, 1) % 2 ? "男" : "女")
-}
-//调用验证方法
-function ZhuCe1() {
-	var id = $("#txtId").val();
-	if(id != "") {
-		alert(CheckIdCard(id));
-	}
-}
 
 //身份证 校验结束
 
 function ZhuCe() {
-	if(NoKong()) {
-		var arr = [];
-		if(localStorage.user) {
-			arr = eval(localStorage.user);
-			for(e in arr) {
-				if($('#loginName').val() == arr[e].loginName) {
-					alert('该账号已被注册');
-					clear();
-					return;
-				}
+	if(NoKong()) {	
+		var obj = {
+			user_name:$('#loginName').val(),
+			user_password:$("#loginPsd").val(),
+			user_phone:$("#phone").val(),
+			user_id_card:$("#txtId").val(),
+			user_full_name:$('#Tname').val()
+		}	
+		$.ajax({  
+			type:"post",  //提交方式 
+			dataType:"json", 
+			contentType:"application/json",
+			url : "http://47.98.167.56:8080/ymee/user/register",//路径  
+			data:JSON.stringify(obj),  
+			success : function(result) {//返回数据根据结果进行相应的处理  
+				alert("注册成功")
+				localStorage.setItem("user_name",$('#loginName').val());
+				location.href="./index.html"
+
+			},
+			error:function(ref){
+				console.log(ref)
+				alert(ref.responseJSON.service_message)
 			}
-		}
-		var user = {
-			'loginName': $("#loginName").val(),
-			'loginPsd': $("#loginPsd").val()
-		};
-		arr.push(user);
-		localStorage.user = JSON.stringify(arr);
-		alert('注册成功，请登录');
-		clear();
-		$('.dl').show();
+		});   
 	}
 }
 
@@ -114,13 +94,18 @@ function NoKong() {
 	var id = $("#txtId").val();
 	var regName =/^[\u4e00-\u9fa5]{2,4}$/;
 	var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+	var regidcard = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
 	if($('#loginName').val() == "") {
 		alert('用户名不能为空');
 		return false;
 	} else if($('#loginPsd').val() == "") {
 		alert('密码不能为空');
 		return false;
-	} else if($('#phone').val() == "") {
+	}else if($("#repassword").val() != $('#loginPsd').val()){
+		alert('两次密码不统一');
+		return false;
+	}
+	 else if($('#phone').val() == "") {
 		alert('手机号码不能为空');
 		return false;
 	} else if($('#Tname').val() == "") {
@@ -132,9 +117,10 @@ function NoKong() {
 	} else if(!regName.test($("#Tname").val())){
 		alert("请输入真实姓名");
 		return false;
-	} else if(CheckIdCard(id)!="1"){
-		alert(CheckIdCard(id));
-	} else if(CheckIdCard(id)=="1"){
+	} else if(!regidcard.test($("#txtId").val())){
+		alert("请输入真实身份证号");
+		return false;
+	}else {
 		return true;
 	}
 }

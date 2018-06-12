@@ -309,6 +309,7 @@ table {
 	margin-left: -180px;
 	margin-top: -150px;
 	display: none;
+	z-index:999;
 }
 
 .dl p {

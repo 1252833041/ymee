@@ -44,7 +44,7 @@ body{ background:#f7f7f7; font:14px/1.15 "Microsoft Yahei",Arial,Helvetica,sans-
 .x-slide .btn span{ display:inline-block; *display:inline; *zoom:1;  vertical-align:middle; width:10px; height:10px; margin:0 5px; border-radius:50px; -webkit-border-radius:50px;  background:rgba(255,255,255,0.5);  overflow:hidden;  margin-right:5px; cursor:pointer; }
 .x-slide .btn span.current{background:#fff; width:14px; height:14px;}
 
-.content{ width:100%; margin:0 auto; background:#f7f7f7;padding-bottom: 50px;}
+.content{ width:100%; margin:0 auto; background:#f7f7f7;padding-bottom: 50px; position: relative;}
 .game-img{ width:980px; margin:0 auto; padding-top:22px;overflow: hidden;}
 .game-img .title{color: #21acd6;font-size: 29px;padding-left:20px;height: 76px; line-height: 76px;border-bottom: 1px solid #ddd;width: 100%;font-weight: bold;overflow: hidden;position: relative;}
 .game-img .title .bar{width: 2px;height: 30px;position: absolute;top: 23px;left: 0;background-color: #21acd6}
@@ -59,9 +59,22 @@ body{ background:#f7f7f7; font:14px/1.15 "Microsoft Yahei",Arial,Helvetica,sans-
 .game-img .more a{display:block; width:133px; height:44px; margin:0 auto; background:url("ann_3.png")/*tpa=http://www.lejuhuyu.com/images/ann_3.png*/ no-repeat;text-indent:-999em; overflow:hidden; cursor:pointer;}
 .game-img .more a:hover{background:url("ann_3_1.png")/*tpa=http://www.lejuhuyu.com/images/ann_3_1.png*/ no-repeat;}
 
-.download{width: 157px; position: absolute;left: 50%;top:850px;margin-left: 550px;overflow: hidden;height: 230px;}
-.download .qr{width: 155px;height:155px;display: block;border:1px solid #ddd;}
-.download p{width: 100%;line-height:75px;text-align: center;color: #000;font-size: 25px;}
+.download{width: 120px;
+    position: absolute;
+    /* left: 50%; */
+    /* top: 850px; */
+    right: 15px;
+    top: 250px;
+    margin-left: 550px;
+    overflow: hidden;
+    height: 230px;
+}
+.download .qr{width: 120px;height:120px;display: block;border:1px solid #ddd;}
+.download p{    width: 100%;
+    line-height: 35px;
+    text-align: center;
+    color: #000;
+    font-size: 16px;}
 .fy-txt{width:964px; margin:0 auto; height:428px; border-radius:8px; -webkit-border-radius:8px; background:#fff;}
 .fy-zixun{float:left; width:673px; padding:18px 0 0 21px; position:relative;}
 .fy-media{float:right; width:205px; padding:18px 21px 0 0; position:relative;}
@@ -729,3 +742,83 @@ body{ background:#f7f7f7; font:14px/1.15 "Microsoft Yahei",Arial,Helvetica,sans-
 .footer .f-copy .f-l p{float:center; line-height:20px; color:#a9a9a9;}
 .footer .f-copy .f-r{float:center; line-height:20px; color:#a9a9a9;margin-up:10px;}
 
+@charset "utf-8";
+/* CSS Document */
+
+@charset "utf-8";
+/* CSS Document */
+
+#certify {
+	position: relative;
+	width: 1200px;
+	margin: 0 auto
+}
+
+#certify .swiper-container {
+	padding-bottom: 60px;
+}
+
+#certify  .swiper-slide {
+	width: 520px;
+	height: 408px;
+	background: #fff;
+	box-shadow: 0 8px 30px #ddd;
+}
+#certify  .swiper-slide img{
+	display:block;
+}
+#certify  .swiper-slide p {
+	line-height: 98px;
+	padding-top: 0;
+	text-align: center;
+	color: #636363;
+	font-size: 1.1em;
+	margin: 0;
+}
+
+#certify .swiper-pagination {
+	width: 100%;
+	bottom: 20px;
+}
+
+#certify .swiper-pagination-bullets .swiper-pagination-bullet {
+	margin: 0 5px;
+	border: 3px solid #fff;
+	background-color: #d5d5d5;
+	width: 10px;
+	height: 10px;
+	opacity: 1;
+}
+
+#certify .swiper-pagination-bullets .swiper-pagination-bullet-active {
+	border: 3px solid #00aadc;
+	background-color: #fff;
+}
+
+#certify .swiper-button-prev {
+	left: -30px;
+	width: 45px;
+	height: 45px;
+	background: url(../images/wm_button_icon.png) no-repeat;
+	background-position: 0 0;
+	background-size: 100%;
+}
+
+#certify .swiper-button-prev:hover {
+	background-position: 0 -46px;
+	background-size: 100%
+}
+
+#certify .swiper-button-next {
+	right: -30px;
+	width: 45px;
+	height: 45px;
+	background: url(../images/wm_button_icon.png) no-repeat;
+	background-position: 0 -93px;
+	background-size: 100%;
+}
+
+#certify .swiper-button-next:hover {
+	background-position: 0 -139px;
+	background-size: 100%
+}
