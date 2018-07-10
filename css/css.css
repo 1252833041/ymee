@@ -380,6 +380,7 @@ table {
 	font-size: 14px;
 	line-height: 28px;
 	padding: 30px;
+	border-bottom: #ccc solid 2px;
 }
 
 .foot .fl{
