@@ -1,8 +1,8 @@
 @charset "utf-8";
 /*create by 2015-07-07*/
 body{ background:#f7f7f7; font:14px/1.15 "Microsoft Yahei",Arial,Helvetica,sans-serif; position:relative; overflow-x:hidden;}
-.head{width:960px; height:80px; margin:0 auto; overflow:hidden;}
-.head .logo{float:left; width:117px; overflow:hidden;margin-left: 70px;}
+.head{width:1160px; height:80px; margin:0 auto; overflow:hidden;}
+.head .logo{float:left; width:117px; overflow:hidden;margin-left: 10px;}
 .head .logo a{float:left; width:142px; height:55px; margin:23px 10px 0 1px; overflow:hidden;}
 /*.head .logo var{ float:left; width:1px; height:23px; background:url(img/base-bg.png) no-repeat 0 0;margin-top:32px;}*/
 .head .logo p{float:left; width:115px; height:46px; padding-left:12px; margin-top:28px; }
@@ -46,12 +46,14 @@ body{ background:#f7f7f7; font:14px/1.15 "Microsoft Yahei",Arial,Helvetica,sans-
 
 .content{ width:100%; margin:0 auto; background:#f7f7f7;padding-bottom: 50px; position: relative;}
 .game-img{ width:980px; margin:0 auto; padding-top:22px;overflow: hidden;}
-.game-img .title{color: #21acd6;font-size: 29px;padding-left:20px;height: 76px; line-height: 76px;border-bottom: 1px solid #ddd;width: 100%;font-weight: bold;overflow: hidden;position: relative;}
+.game-img .title{color: #21acd6;font-size: 29px;padding-left:20px;height: 170px; line-height: 76px;border-bottom: 1px solid #ddd;width: 100%;font-weight: bold;overflow: hidden;position: relative;}
 .game-img .title .bar{width: 2px;height: 30px;position: absolute;top: 23px;left: 0;background-color: #21acd6}
 .game-img .con{text-align: center;}
 .game-img .av-img img{width: 100%;height: 100%;}
-.game-img .av-img{float:left; width:298px; height:498px; margin:0 40px 20px 0;  overflow:hidden; position:relative;}
-.game-img .av-img-r{ margin-right:0;}
+.game-img .av-img{float:left; width:298px; height:198px; margin:0 40px 20px 0;  overflow:hidden; position:relative;}
+.game-img .av-img-r{margin-right:0;}
+.game-img .av-img-s{margin-left: 170px;}
+.game-img .av-img-b{margin-left: 50px;}
 .game-img .av-img .cover{display:none; width:100%; height:100%; line-height:210px; text-align:center; font-size:18px; color:#fff; font-weight:bold; background:rgba(255,255,255,0.3); position:absolute; top:0; left:0; z-index:9; border-radius:8px; -webkit-border-radius:8px;}
 .game-img .av-img:hover .cover{display:block;}
 
@@ -67,9 +69,12 @@ body{ background:#f7f7f7; font:14px/1.15 "Microsoft Yahei",Arial,Helvetica,sans-
     top: 250px;
     margin-left: 550px;
     overflow: hidden;
-    height: 230px;
+    height: 160px;
 }
 .download .qr{width: 120px;height:120px;display: block;border:1px solid #ddd;}
+.aax{
+	text-align: center;
+}
 .download p{    width: 100%;
     line-height: 35px;
     text-align: center;
@@ -821,4 +826,13 @@ body{ background:#f7f7f7; font:14px/1.15 "Microsoft Yahei",Arial,Helvetica,sans-
 #certify .swiper-button-next:hover {
 	background-position: 0 -139px;
 	background-size: 100%
+}
+.text_box11{
+	width: 239px;
+    float: left;
+    height: 85px;
+    line-height: 85px;
+    font-size: 18px;
+    font: #fff;
+    color: #353535;
 }

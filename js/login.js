@@ -43,7 +43,7 @@ $(function() {
                 type:"post",  //提交方式 
                 dataType:"json", 
                 contentType:"application/json",
-                url : "http://47.98.167.56:8080/ymee/user/login",//路径  
+                url : "http://www.waimikeji.com:8090/ymee/user/login",//路径  
                 data:JSON.stringify(obj),  
                 success : function(result) {//返回数据根据结果进行相应的处理  
                     alert("登陆成功")
@@ -52,10 +52,8 @@ $(function() {
                     $(".user_name").html(result.data.user_name);
                     $("#not_login").hide()
                     $("#have_login").show()
-
                 },
                 error:function(ref){
-                    console.log(ref)
                     alert(ref.responseJSON.service_message)
                 }
             });      

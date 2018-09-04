@@ -65,7 +65,7 @@ function ZhuCe() {
 			type:"post",  //提交方式 
 			dataType:"json", 
 			contentType:"application/json",
-			url : "http://47.98.167.56:8080/ymee/user/register",//路径  
+			url : "http://www.waimikeji.com:8090/ymee/user/register",//路径  
 			data:JSON.stringify(obj),  
 			success : function(result) {//返回数据根据结果进行相应的处理  
 				alert("注册成功")

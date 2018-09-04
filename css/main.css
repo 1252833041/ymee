@@ -453,14 +453,7 @@ color: #777;margin: 10px 0 0 20px;}
 .reg-l{width: 800px;float: left;padding-right: 80px;border-right:1px dashed #ddd;}
 .reg-l h3{padding: 10px 0;}
 .regbox{padding-right: 100px;display: none;}
-.textbox{padding: 15px 0;overflow: hidden;color: #666;}
-.textbox label{display: block;text-align: right;float: left;width:120px;margin-right:5px;height:30px;line-height:30px;}
-.textbox input[type="text"],.textbox input[type="password"]{display: block;float: left;width: 250px;height:30px;line-height:30px;font-size: 14px;border: solid 1px #ccc;padding-left: 5px;    box-shadow: inset 0 4px 4px rgba(200,200,200,0.3);}
-.textbox input[type="text"].yzm{width: 80px;}
-.textbox input[type="text"]:focus{background-color:rgb(250, 255, 189);border-color: #2177D9;}
-.textbox input[type="password"]:focus{background-color:rgb(250, 255, 189);border-color: #2177D9;outline: none;}
-.textbox p{width:200px;height: 30px;line-height: 30px;float: left;margin-left: 10px;font-size: 12px;}
-.textbox p span{color: #f99;}
+
 .line{height: 20px;border-bottom: 1px dashed #ddd;}
 .regbox input[type="button"]{display: block;width: 200px;height:40px;background-color: #eee;color: #fff;text-align: center;margin-top: 25px;border: none;cursor: pointer;}
 .regbox a{display: block;margin-left: 160px;padding-top: 15px;color: #2177D9;    text-decoration: underline;font-size: 12px;width: 120px;}
@@ -848,7 +841,7 @@ a.bl:hover{color: #fff;background:#50c0ff; }
 /********************************å……å€¼ä¸­å¿ƒ*************************************/
 .paycenter{background-color: #f9f9f9;border: solid 1px #e8e8e8;position: relative;color: #333;min-height: 400px;}
 .paycenter-l{width: 300px;min-height:400px;position: absolute;left: 0;top: 0;z-index: 2;}
-.paycenter-l ul li{width: 300px;height: 50px;line-height: 50px;border-bottom: solid 1px #e4e4e4;background:url(../images/icon-sider-bar.png) 0 0 no-repeat;
+.paycenter-l ul li{width: 300px;height: 50px;line-height: 50px;border-bottom: solid 1px #e4e4e4;
     background-color: #f9f9f9;background-position: 42px 20px;
 text-align: left;text-indent:80px;border-left: solid 4px #f9f9f9;cursor: pointer;border-right: solid 1px #e4e4e4;}
 .paycenter-l ul li.on{border-left: solid 4px #ee1b22;background-color: #fff;border-right: solid 1px #fff;}
